@@ -20,18 +20,21 @@ public class SearchArray {
 	public static int binarySearch(int[] array, int target) {
 
 		int left = 0;
-		int  right = array.length - 1;
-		
+		int right = array.length - 1;
+
 		while (left <= right) {
-			System.out.println("Left -->"+left+"   Right---> "+ right);
-			   
+			System.out.println("Left -->" + left + "   Right --> " + right);
+
 			int mid = (right + left) / 2;
-			System.out.println("mid--->   "+mid);
-			
-			if (array[mid] == target) return mid;
-			else if (array[mid] < target) left = mid + 1;
-			else right = mid - 1;
-			
+			System.out.println("mid -->   " + mid);
+
+			if (array[mid] == target)
+				return mid;
+			else if (array[mid] < target)
+				left = mid + 1;
+			else
+				right = mid - 1;
+
 		}
 
 		return -1;
