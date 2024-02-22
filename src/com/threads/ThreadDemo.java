@@ -1,52 +1,44 @@
 package com.threads;
 
-class Hi implements Runnable {
+class Hi extends Thread {
 
-	@Override
-	public void run() {
-		for (int i = 0; i < 5; i++) {
-			System.out.println("Hi");
-			try {
-				Thread.sleep(1000);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-
-		}
-
-	}
+  public void run() {
+    for (int i = 0; i < 5; i++) {
+      System.out.println("Hi");
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+    }
+  }
 }
 
-class Hello implements Runnable {
+class Hello extends Thread {
 
-	@Override
-	public void run() {
-		for (int i = 0; i < 5; i++) {
-			System.out.println("Hello");
-			try {
-				Thread.sleep(1000);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-
-		}
-
-	}
+  public void run() {
+    for (int i = 0; i < 5; i++) {
+      System.out.println("Hello");
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+    }
+  }
 }
 
 public class ThreadDemo {
 
-	public static void main(String[] args) {
+  public static void main(String[] args) {
+    Hi hi = new Hi();
+    Hello hello = new Hello();
 
-//		Threads using a implemented class
+    hi.start();
+    //		hi.run();
 
-		Thread hi = new Thread(new Hi());
-		Thread hello = new Thread(new Hello());
-		hi.start();
-		hello.start();
+    hello.start();
+    //		hello.run();
 
-
-
-	}
-
+  }
 }

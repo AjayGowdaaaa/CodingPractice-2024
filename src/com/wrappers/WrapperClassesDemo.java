@@ -2,7 +2,12 @@ package com.wrappers;
 
 public class WrapperClassesDemo {
 	
-	Integer num = 25;
+	static Integer num ;
+
+
+	public static void main(String[] args) {
+		System.out.println(num);
+	}
 
 
 }
