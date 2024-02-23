@@ -77,7 +77,7 @@ public class ArrayQuestions {
 
   public static void main(String[] args) {
     // Reverse an array
-    int[][] array1 = { { 1, 2 }, { 3, 4 } };
-    int[][] array2 = { { 1, 1 }, { 1, 1 } };
+    // int[][] array1 = { { 1, 2 }, { 3, 4 } };
+    // int[][] array2 = { { 1, 1 }, { 1, 1 } };
   }
 }
